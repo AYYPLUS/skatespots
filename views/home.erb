@@ -1,0 +1,30 @@
+<html>
+	<style>
+		.title {
+		}
+	</style>
+  <body>
+    <ul>
+    	<% @skatespots.each do |skatespot| %>
+			<li>
+				<h1 style="color:<%= skatespot[:color] %>;">
+					<%= skatespot[:name] %>
+				</h1>
+
+				<div>
+					<%= skatespot[:address1] %>
+				</div>
+				<div>
+					<%= skatespot[:address2] %>
+				</div>
+				<div class="latlong">
+					<%= skatespot[:latlong] %>
+				</div>
+				<p>
+					<%= skatespot[:descripton] %>
+				</p>
+			</li>
+			<% end %>
+		</ul>	
+  </body>
+</html>
